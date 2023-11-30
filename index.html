@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FCC HeatMap</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class='main'>
+  <svg id="HeatMap" class="heatMap">
+    <text id="title" class="title" x="175px" y="25px">
+      Monthly global land-surface temperature
+    </text>
+    <text id='description' class='description' x='250px' y='50px'>
+      1753 - 2015: base temperature 8.66℃
+    </text>
+  </svg>
+  <svg id="legend">
+    <g>
+      <rect fill="#0d67f8" x="0" y="0" width="100%" height="25%" />
+      <text x='60' y='25' fill='white'>Less than or equal to -1 variance</text>
+    </g>
+    <g>
+      <rect fill="#0dc5f8" x='0' y='40' width="100%" height='25%' />
+      <text x='60' y='65' fill='white'>On or below average variance</text>
+    </g>
+    <g>
+      <rect fill="#f89e0d" x='0' y='80' width='100%' height='25%' />
+      <text x='60' y='105' fill='white'>Above average variance</text>
+    </g>
+    <g>
+      <rect fill="#f80d67" x='0' y='120' width='100%' height='25%' />
+      <text x='60' y='140' fill='white'>Above 1 degree variance</text>
+    </g>
+  </svg>
+  <div id='tooltip' class='tooltip'></div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/7.6.1/d3.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
